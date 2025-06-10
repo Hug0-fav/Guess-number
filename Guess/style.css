@@ -1,36 +1,137 @@
-html,
-body {
-  padding: 0.55rem;
+/* Reset some default styles */
+body,
+h1,
+p,
+input,
+button {
   margin: 0;
-  height: 100%;
-  width: 100%;
+  padding: 0;
   box-sizing: border-box;
-  background: whitesmoke;
-  font-family: monospace;
-  font-size: 1.2rem;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(120deg, #4e54c8, #8f94fb);
+  min-height: 100vh;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  text-align: center;
+  margin-top: 40px;
 }
 
-p.mark {
-  display: inline-block;
-  border: 1px solid black;
-  padding: 12px 19px;
-  position: relative;
-  left: 50%;
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.between {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.number {
+  background: #fff;
+  color: #4e54c8;
+  font-size: 2.5rem;
+  width: 80px;
+  height: 80px;
+  margin: 20px auto 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 40px;
+}
+
+.left,
+.right {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  min-width: 220px;
+}
+
+input.guess {
+  width: 60px;
+  padding: 8px;
+  font-size: 1.2rem;
+  border: 2px solid #4e54c8;
+  border-radius: 8px;
+  margin-right: 12px;
+  text-align: center;
 }
 
 .btn {
-  padding: 12px;
-  font-family: monospace;
+  background: #4e54c8;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.btn:hover {
+  background: #222;
+}
+
+.again {
+  margin-top: 10px;
+  background: #ffb347;
+  color: #222;
+}
+
+.again:hover {
+  background: #ff9800;
+  color: #fff;
+}
+
+.message {
+  font-size: 1.2rem;
+  margin-bottom: 18px;
+  min-height: 28px;
+}
+
+.label-score,
+.label-highscore {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.score,
+.highscore {
+  font-weight: bold;
+  color: #4e54c8;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 700px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .left,
+  .right {
+    min-width: 160px;
+    padding: 20px 10px;
+  }
 }
